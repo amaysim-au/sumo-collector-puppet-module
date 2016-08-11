@@ -54,7 +54,7 @@ class sumo::nix_config (
   }
 
   exec { 'Download Sumo Executable':
-    command => "/usr/bin/curl -o /usr/local/sumo/${sumo_exec} https://collectors.sumologic.com/rest/download/linux/${sumo_short_arch}",
+    command => "/usr/bin/curl -o /usr/local/sumo/${sumo_exec} https://collectors.au.sumologic.com/rest/download/linux/${sumo_short_arch}",
     cwd     => '/usr/bin',
     creates => "/usr/local/sumo/${sumo_exec}",
     require => File['/usr/local/sumo'],
